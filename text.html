@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<div>
+			<h1 class="main">#{{postNumber}}</h1>
+			<p>
+				{{body}}
+			</p>
+			<span>- <span class="last">{{name}}</span></span>
+		</div>
+		<style>
+			body,
+			html {
+				font-size: 1.2em;
+				margin: 0;
+				padding: 0;
+				height: 100%;
+				width: 100%;
+				display: flex;
+				background-color: #161d20;
+				color: #ccc;
+				font-family: system-ui, -apple-system, BlinkMacSystemFont,
+					"Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+			}
+			div {
+				max-width: 70vw;
+				margin: auto;
+			}
+			.last {
+				text-decoration: underline;
+				text-decoration-style: wavy;
+			}
+			.main {
+				text-align: center;
+				margin-bottom: 0;
+				background-image: radial-gradient(
+					ellipse farthest-corner at top left,
+					#4ed6ff,
+					#338eda
+				);
+				background-repeat: no-repeat;
+				background-clip: text;
+				-webkit-text-fill-color: transparent;
+				font-style: italic;
+			}
+			p {
+				margin-top: 5px;
+			}
+		</style>
+	</body>
+</html>
