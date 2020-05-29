@@ -37,7 +37,7 @@ app.post("/api/post", async (req, res) => {
                 base('Current Number').find(MAX_ID, async (err, record) => {
                     await login()
                     let image = await html2image({
-                        html: html.toString().replace("{{body}}", req.body.body).replace("{{name}}", req.body.name).replace("{{number}}", record.get("MAX") + 1)
+                        html: html.toString().replace("{{body}}", req.body.body).replace("{{name}}", req.body.name).replace("{{number}}", record.get("MAX") + 1).replace("<", "&lt").replace(">", "&rt")
                     })
                     let pngBuffer = await pngToJpeg({ quality: 100 })(image)
                     let result = await ig.publish.photo({
